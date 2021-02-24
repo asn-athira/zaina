@@ -1,0 +1,113 @@
+
+.navbar ul{
+  list-style: none;
+  background: rgba(255, 255, 255, 0.7);;
+  overflow: hidden;
+  padding-left: 30px;
+}
+.navbar ul li{
+  float: left;
+  margin: 10px;
+}
+.navbar ul li a, .drpbtn{
+  text-decoration: none;
+  padding: 20px;
+  position: static;
+	width: 47px;
+	height: 22px;
+	left: 30px;
+	top: 0px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 180%;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #0073D5;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 0px;
+}
+.logo{
+	position: absolute;
+	left: 20px;
+	right: 0%;
+	top: 5px;
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 32px;
+}
+.logo-text{
+	position: absolute;
+	left: 39.72%;
+	right: 0%;
+	top: 15.85%;
+	bottom: 35.06%;
+
+	background: #001E42;
+}
+.navbar-button{
+
+	background: #001E42;
+	border-radius: 50px;
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 32px;
+
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+
+	color: #FFFFFF;
+	padding: 5px;
+
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 4px;
+}
+.phone{
+	position: absolute;
+	right: 1.48%;
+	top: 0%;
+	bottom: 75%;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 180%;
+	text-transform: capitalize;
+	color: #001E42;
+}
+.phone2{
+	position: absolute;
+	right: 1.48%;
+	top: 5px;
+	bottom: 75%;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 10px;
+	line-height: 180%;
+	text-transform: capitalize;
+	color: #001E42;
+}
+.phone-text{
+	position: absolute;
+	right: 33px;
+	top: .1px;
+	bottom: 75%;
+	font-family: Krona One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 180%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #10A1FD;
+}

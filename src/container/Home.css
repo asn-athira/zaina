@@ -1,0 +1,96 @@
+.section{
+	position: absolute;
+	width: 100%;
+	height: 705px;
+	left: 0px;
+
+	background: #FFFFFF;
+
+}
+.content{
+  position:absolute;
+  top:100px;
+  margin-top:50px;
+  margin-bottom:50px;
+  padding-bottom: 50px;
+}
+.button-main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 40px;
+
+	position: absolute;
+	width: 275px;
+	height: 46px;
+	left: 81px;
+	top: 426px;
+
+	background: #69B0EA;
+	border-radius: 50px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 180%;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+  color: #FFFFFF;
+  flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 0px;
+}
+
+.column{
+	width:50%;
+	}
+.text{
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 120%;
+	color: #326383;
+	position: absolute;
+	width: 383px;
+	height: 29px;
+	left: 86px;
+	top: 40px;
+}
+.text-2{
+	position: absolute;
+	width: 348px;
+	height: 52px;
+	left: 86px;
+	top: 300px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 130%;
+	color: #326383;
+}
+.head{
+	position: absolute;
+	width: 644px;
+	height: 84px;
+	left: 80px;
+	top: 50px;
+	font-family: Krona One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 70px;
+	line-height: 120%;
+	color: #0073D5;
+}
+.img{
+	position: absolute;
+	width: 700px;
+	height: 590px;
+	left: 580px;
+	top: 1%;
+	right: 0px;
+
+}

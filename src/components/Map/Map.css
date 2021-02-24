@@ -1,0 +1,144 @@
+
+.responsive-map-container {
+    position: absolute;
+    height: 700px;
+    filter: grayscale(100%);
+    top:8100px;
+    left:0%;
+    width: 100%;
+}
+
+.responsive-map-container iframe,   
+.responsive-map-container object,  
+.responsive-map-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.card{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 48px 48px 80px;
+
+	position: absolute;
+	width: 450px;
+	height: 500px;
+	left: 80px;
+	top: 7950px;
+
+	background: #F5F7FA;
+	border-radius: 32px;
+}
+.card-h2{
+	position: absolute;
+	width: 544px;
+	height: 65px;
+	left: 48px;
+	top: 30px;
+
+	font-family: Krona One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 140%;
+
+
+	color: #10A1FD;
+}
+.card-p{
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 180%;
+
+
+color: #326383;
+}
+.card-button{
+	/* Frame 32 */
+
+/* Auto Layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 28px 42px;
+
+position: static;
+width: 558px;
+height: 118px;
+left: 41px;
+top: 423px;
+
+/* color / button */
+background: #69B0EA;
+border-radius: 32px;
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 32px 0px;
+
+
+/* servise location */
+
+position: static;
+width: 278px;
+height: 43px;
+left: 42px;
+top: 37.5px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 180%;
+/* or 43px */
+letter-spacing: 0.1em;
+text-transform: uppercase;
+
+color: #FFFFFF;
+
+
+/* Inside Auto Layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 32px;
+
+
+/* icon/navigation/arrow_back_ios_24px */
+
+position: static;
+left: 92.47%;
+right: 3.23%;
+top: 60.17%;
+bottom: 19.49%;
+
+transform: matrix(0, -1, -1, 0, 0, 0);
+
+/* Inside Auto Layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0px 32px;
+
+
+/* icon/navigation/arrow_back_ios_24px */
+
+position: absolute;
+left: 91.25%;
+right: -39.87%;
+top: 74.31%;
+bottom: -56.81%;
+
+background: #FFFFFF;
+transform: matrix(0, -1, -1, 0, 0, 0);
+
+}

@@ -1,0 +1,14 @@
+.capture{
+	position: absolute;
+	width: 1440px;
+	height: 561px;
+	left: 0px;
+	top: 1040px;
+}
+.pattern{
+	position: absolute;
+	width: 1279px;
+	height: 426px;
+	left: 80px;
+	top: 100px;
+}
