@@ -37,7 +37,7 @@
 	width: 544px;
 	height: 65px;
 	left: 48px;
-	top: 30px;
+	top: 20px;
 
 	font-family: Krona One;
 	font-style: normal;
@@ -49,7 +49,41 @@
 	color: #10A1FD;
 }
 .card-p{
+position: absolute;
+width: 440px;
+height: 51px;
+left: 48px;
+top: 129px;
+font-family: Montserrat;
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 180%;
 
+
+color: #326383;
+}
+.card-p2{
+position: absolute;
+width: 440px;
+height: 51px;
+left: 48px;
+top: 200px;
+font-family: Montserrat;
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 180%;
+
+
+color: #326383;
+}
+.card-p3{
+position: absolute;
+width: 440px;
+height: 51px;
+left: 48px;
+top: 320px;
 font-family: Montserrat;
 font-style: normal;
 font-weight: 300;
@@ -60,85 +94,27 @@ line-height: 180%;
 color: #326383;
 }
 .card-button{
-	/* Frame 32 */
-
-/* Auto Layout */
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 28px 42px;
-
-position: static;
-width: 558px;
-height: 118px;
-left: 41px;
-top: 423px;
-
-/* color / button */
-background: #69B0EA;
-border-radius: 32px;
-
-/* Inside Auto Layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 32px 0px;
-
-
-/* servise location */
-
-position: static;
-width: 278px;
-height: 43px;
-left: 42px;
-top: 37.5px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 180%;
-/* or 43px */
-letter-spacing: 0.1em;
-text-transform: uppercase;
-
-color: #FFFFFF;
-
-
-/* Inside Auto Layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-margin: 0px 32px;
-
-
-/* icon/navigation/arrow_back_ios_24px */
-
-position: static;
-left: 92.47%;
-right: 3.23%;
-top: 60.17%;
-bottom: 19.49%;
-
-transform: matrix(0, -1, -1, 0, 0, 0);
-
-/* Inside Auto Layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-margin: 0px 32px;
-
-
-/* icon/navigation/arrow_back_ios_24px */
-
-position: absolute;
-left: 91.25%;
-right: -39.87%;
-top: 74.31%;
-bottom: -56.81%;
-
-background: #FFFFFF;
-transform: matrix(0, -1, -1, 0, 0, 0);
-
+	position: absolute;
+	
+	justify-content: space-between;
+	align-items: center;
+	padding: 28px 42px;
+	width: 420px;
+	height: 100px;
+	left: 45px;
+	top: 65%;
+	background: #69B0EA;
+	border-radius: 32px;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 32px 0px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 180%;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFFFFF;
 }

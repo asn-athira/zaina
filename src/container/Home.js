@@ -21,7 +21,7 @@ return (
 	      		<button className="button-main"> Call us now on 800-WASH</button>
 	      	</div>
 	      	<div className="column">
-	      	<img src="/banner.png" className="img"/>
+	      		<img src="/banner.png" className="img" alt=""/>
 	      	</div>
       	</div>
       	<Ticker />
