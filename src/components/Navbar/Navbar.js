@@ -7,7 +7,7 @@ return (
 			
 			<div className="navbar">				
 			  <ul>
-			    <li><img src="/logo1.png" className="logo" alt=""/></li>
+			    <li><img src="/images/logo1.png" className="logo" alt=""/></li>
 			    <li><a href="about.html">About</a></li>
 			    <li><a href="about.html">Services</a></li>
 			    <li><a href="about.html">About</a></li>

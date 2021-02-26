@@ -6,6 +6,11 @@ import Footer from './../components/Footer/Footer';
 import Map from './../components/Map/Map';
 import Ticker from './../components/Ticker/Ticker';
 import Capture from './../components/Capture/Capture';
+import Advantages from './../components/Advantages/Advantages';
+import Offers from './../components/zaina_offers/Offers';
+import Works from './../components/zaina_works/Works';
+import Schedule from './../components/zaina_pickup_schedule/Schedule';
+import Pricing from './../components/zaina_pricing/Pricing';
 
 const Home = (props) => {
 
@@ -21,11 +26,16 @@ return (
 	      		<button className="button-main"> Call us now on 800-WASH</button>
 	      	</div>
 	      	<div className="column">
-	      		<img src="/banner.png" className="img" alt=""/>
+	      		<img src="/images/banner.png" className="img" alt=""/>
 	      	</div>
       	</div>
       	<Ticker />
       	<Capture />
+      	<Advantages />
+      	<Offers />
+        <Works />
+        <Schedule />
+        <Pricing />
       </div>
       <Map />
       <Footer />

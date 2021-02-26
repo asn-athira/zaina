@@ -1,0 +1,56 @@
+.zaina-offers{
+	position: absolute;
+	width: 1440px;
+	height: 734px;
+	left: 1px;
+	top: 2400px;
+}
+.offers-h1{
+	position: absolute;
+	width: 485px;
+	height: 67px;
+	left: 200px;
+	top: 0px;
+	font-family: Krona One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 140%;
+	color: #86A7D0;
+}
+.offers-grp1{
+	position: absolute;
+	width: 838px;
+	height: 519px;
+	left: 189px;
+	top: 135px;
+
+}
+.offers-rect1{
+	position: absolute;
+	left: 0%;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+	
+}
+.offers-rect2{
+	position: absolute;
+	left: 800px;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+
+}
+.offers-pagination{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	position: absolute;
+	width: 8px;
+	height: 107px;
+	left: 664px;
+	top: 726px;
+	transform: rotate(90deg);
+}
