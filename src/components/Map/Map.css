@@ -3,7 +3,7 @@
     position: absolute;
     height: 700px;
     filter: grayscale(100%);
-    top:8100px;
+    top:7900px;
     left:0%;
     width: 100%;
 }
@@ -27,7 +27,7 @@
 	width: 450px;
 	height: 500px;
 	left: 80px;
-	top: 7950px;
+	top: 7750px;
 
 	background: #F5F7FA;
 	border-radius: 32px;

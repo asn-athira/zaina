@@ -1,0 +1,136 @@
+.zaina-testimonials{
+	position: absolute;
+	width: 1440px;
+	height: 400px;
+	left: 0px;
+	top: 6691px;
+}
+.testimonial-tittle{
+	position: absolute;
+	width: 300px;
+	height: 128px;
+	left: 83px;
+	top: 111px;
+	font-family: Krona One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 140%;
+	color: #2869A0;
+}
+.testimonial-sub-tittle{
+	position: absolute;
+	width: 279px;
+	height: 29px;
+	left: 82px;
+	top: 70px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 120%;
+	color: #326383;
+}
+.testimonial-button{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 40px;
+	position: absolute;
+	width: 267px;
+	height: 46px;
+	left: 82px;
+	top:320px;
+	background: #2869A0;
+	border-radius: 50px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 180%;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 0px;
+}
+
+.testimonial-card1{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 32px 32px 56px;
+	position: absolute;
+	width: 370px;
+	height: 371px;
+	left: 450px;
+	top: 16px;
+	background: #FFFFFF;
+	border: 1px solid #DAE8FA;
+	border-radius: 32px;
+}
+.testimonial-card2{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 32px 32px 56px;
+	position: absolute;
+	width: 370px;
+	height: 371px;
+	left: 950px;
+	top: 16px;
+	background: #FFFFFF;
+	border: 1px solid #DAE8FA;
+	border-radius: 32px;
+}
+.testimonial-card-username{
+	position: absolute;
+	left: 136px;
+	top: 5.63%;
+	bottom: 79.78%;
+	font-family: Krona One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 180%;
+	color: #2869A0;
+}
+
+.testimonial-card-title{
+	position: absolute;
+	left: 6.35%;
+	right: 32.71%;
+	top: 30.86%;
+	bottom: 56.67%;
+	font-family: Krona One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: #2869A0;
+}
+.testimonial-card-content{
+	position: absolute;
+	width: 370px;
+	height: 130px;
+	left: 32px;
+	top: 220px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 160%;
+	color: #326383;
+
+}
+.testimonial-card-slider-button{
+	position: absolute;
+left: 78%;
+right: -26%;
+top: 26%;
+bottom: 26%;
+
+transform: matrix(-1, 0, 0, 1, 0, 0);
+}

@@ -82,11 +82,11 @@
 
 }
 .card-pricing1-h1{
-	position: static;
+	position: absolute;
 	width: 246px;
 	height: 43px;
-	left: 50px;
-	top: 40px;
+	left: 5px;
+	top: 10px;
 	font-family: Krona One;
 	font-style: normal;
 	font-weight: normal;
@@ -100,12 +100,13 @@
 	flex-grow: 0;
 	margin: 32px 0px;
 }
+
 .card-pricing1-p1{
-	position: static;
+	position: absolute;
 	width: 246px;
 	height: 34px;
-	left: 50px;
-	top: 115px;
+	left: 30px;
+	top: 80px;
 	font-family: Montserrat;
 	font-style: normal;
 	font-weight: 500;
@@ -119,3 +120,461 @@
 	flex-grow: 0;
 	margin: 32px 0px;
 }
+.card-pricing1-sub1-p1{
+	position: absolute;
+	width: 71px;
+	height: 31px;
+	left: 40px;
+	top: 190px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 180%;
+	color: #2869A0;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing1-sub1-no1{
+	position: absolute;
+	width: 64px;
+	height: 31px;
+	left: 136px;
+	top: 190px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 180%;
+	color: #2869A0;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing1-sub2-p1{
+	position: absolute;
+	width: 71px;
+	height: 31px;
+	left: 40px;
+	top: 220px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 180%;
+	color: #2869A0;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing1-sub2-no1{
+	position: absolute;
+	width: 64px;
+	height: 31px;
+	left: 136px;
+	top: 220px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 180%;
+	color: #2869A0;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing1-sub3-p1{
+	position: absolute;
+	width: 90px;
+	height: 31px;
+	left: 40px;
+	top: 250px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 180%;
+	color: #2869A0;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing1-sub3-no1{
+	position: absolute;
+	width: 64px;
+	height: 31px;
+	left: 136px;
+	top: 250px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 180%;
+	color: #2869A0;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing1-readmore1{
+	position: absolute;
+	width: 84px;
+	height: 22px;
+	left: 60px;
+	top: 300px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 180%;
+	text-transform: uppercase;
+	color: #10A1FD;;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 22px;
+}
+
+
+
+
+
+
+
+.card-pricing2-h1{
+	position: absolute;
+	width: 246px;
+	height: 43px;
+	left: 5px;
+	top: 10px;
+	font-family: Krona One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 180%;
+	text-align: center;
+	color: #FFFFFF;
+	flex: none;
+	order: 0;
+	align-self: stretch;
+	flex-grow: 0;
+	margin: 32px 0px;
+}
+
+.card-pricing2-p1{
+	position: absolute;
+	width: 246px;
+	height: 34px;
+	left: 30px;
+	top: 80px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 190%;
+	text-align: center;
+	color: #FFFFFF;
+	flex: none;
+	order: 1;
+	align-self: stretch;
+	flex-grow: 0;
+	margin: 32px 0px;
+}
+.card-pricing2-sub1-p1{
+	position: absolute;
+	width: 71px;
+	height: 31px;
+	left: 40px;
+	top: 190px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 180%;
+	color: #FFFFFF;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing2-sub1-no1{
+	position: absolute;
+	width: 64px;
+	height: 31px;
+	left: 136px;
+	top: 190px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 180%;
+	color: #FFFFFF;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing2-sub2-p1{
+	position: absolute;
+	width: 71px;
+	height: 31px;
+	left: 40px;
+	top: 220px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 180%;
+	color: #FFFFFF;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing2-sub2-no1{
+	position: absolute;
+	width: 64px;
+	height: 31px;
+	left: 136px;
+	top: 220px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 180%;
+	color: #FFFFFF;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing2-sub3-p1{
+	position: absolute;
+	width: 90px;
+	height: 31px;
+	left: 40px;
+	top: 250px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 180%;
+	color: #FFFFFF;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing2-sub3-no1{
+	position: absolute;
+	width: 64px;
+	height: 31px;
+	left: 136px;
+	top: 250px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 180%;
+	color: #FFFFFF;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing2-readmore1{
+	position: absolute;
+	width: 84px;
+	height: 22px;
+	left: 60px;
+	top: 300px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 180%;
+	text-transform: uppercase;
+	color: #10A1FD;;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 22px;
+}
+
+
+
+
+
+
+
+.card-pricing2-p2{
+	position: absolute;
+	width: 246px;
+	height: 34px;
+	left: 30px;
+	top: 300px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 190%;
+	text-align: center;
+	color: #FFFFFF;
+	flex: none;
+	order: 1;
+	align-self: stretch;
+	flex-grow: 0;
+	margin: 32px 0px;
+}
+.card-pricing2-sub1-p2{
+	position: absolute;
+	width: 71px;
+	height: 31px;
+	left: 40px;
+	top: 390px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 180%;
+	color: #FFFFFF;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing2-sub1-no2{
+	position: absolute;
+	width: 64px;
+	height: 31px;
+	left: 136px;
+	top: 390px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 180%;
+	color: #FFFFFF;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing2-sub2-p2{
+	position: absolute;
+	width: 71px;
+	height: 31px;
+	left: 40px;
+	top: 420px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 180%;
+	color: #FFFFFF;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing2-sub2-no2{
+	position: absolute;
+	width: 64px;
+	height: 31px;
+	left: 136px;
+	top: 420px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 180%;
+	color: #FFFFFF;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing2-sub3-p2{
+	position: absolute;
+	width: 71px;
+	height: 31px;
+	left: 40px;
+	top: 450px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 17px;
+	line-height: 180%;
+	color: #FFFFFF;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing2-sub3-no2{
+	position: absolute;
+	width: 64px;
+	height: 31px;
+	left: 136px;
+	top: 450px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 180%;
+	color: #FFFFFF;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+	margin: 0px 24px;
+}
+.card-pricing2-readmore1{
+	position: absolute;
+	width: 84px;
+	height: 22px;
+	left: 60px;
+	top: 520px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 180%;
+	text-transform: uppercase;
+	color: #FFFFFF;;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	margin: 0px 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

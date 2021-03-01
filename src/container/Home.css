@@ -1,16 +1,26 @@
+.zaina-home{
+	position:fixed;
+  top:100px;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  
+}
+
 .section{
 	position: absolute;
 	width: 100%;
 	height: 705px;
 	left: 0px;
+	right: 0px;
 	background: #FFFFFF;
 }
-.content{
+.zaina-content{
   position:absolute;
   top:100px;
-  margin-top:50px;
-  margin-bottom:50px;
-  padding-bottom: 50px;
+  width: 100%;
+  left: 0px;
+  right: 0px;
   display: flex;
   flex-direction: column;
 }
@@ -91,4 +101,20 @@
 	top: 1%;
 	right: 0px;
 
+}
+.zaina-ticker1{
+	position: absolute;
+	width: 1300px;
+	height: 124px;
+	left: 0px;
+	top: 650px;
+	right: 0px;
+}
+.zaina-ticker2{
+	position: absolute;
+	width: 1300px;
+	height: 124px;
+	left: 0px;
+	top: 6500px;
+	right: 0px;
 }
