@@ -1,6 +1,6 @@
 .zaina-offers{
 	position: absolute;
-	width: 1440px;
+	max-width: 100%;
 	height: 734px;
 	left: 1px;
 	top: 2400px;

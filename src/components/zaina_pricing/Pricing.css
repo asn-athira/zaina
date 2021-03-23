@@ -1,6 +1,6 @@
 .zaina-pricing{
 	position: absolute;
-	width: 1440px;
+	max-width: 100%;
 	height: 935px;
 	left: -5px;
 	top: 4352px;
