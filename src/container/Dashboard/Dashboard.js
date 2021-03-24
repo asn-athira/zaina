@@ -13,34 +13,33 @@ return (
     <nav className="navbar" >
    &nbsp;&nbsp;<img src="/images/logo1.png" className="logo1" alt=""/>
 
-	  
     <img src="/images/user.png" className="logout" alt=""/>
 
-</nav>
-  <nav className="main-menu">
-	  <ul>
-	    <li> 
-	      <i className="fa fa-home fa-2x"></i>
-        <Link  className="nav-text" to={"/dashboard"}>Home</Link>
+		</nav>
+	  <nav className="main-menu">
+		  <ul>
+		    <li> 
+		      <i className="fa fa-home fa-2x"></i>
+	        <Link  className="nav-text" to={"/dashboard"}>Home</Link>
 
-	    </li>
-	      <li classNameName="has-subnav">
-		      <i className="fa fa-user fa-2x"></i>
-	        <Link  className="nav-text" to={"/profile"}>Profile</Link>
-	      </li>
-		  <ul classNameName="logout">
-		    <li>
-		      <i className="fa fa-power-off fa-2x"></i>
-         	<Link  className="nav-text" to={"/"}>Logout</Link>
+		    </li>
+		      <li classNameName="has-subnav">
+			      <i className="fa fa-user fa-2x"></i>
+		        <Link  className="nav-text" to={"/profile"}>Profile</Link>
+		      </li>
+			  <ul classNameName="logout">
+			    <li>
+			      <i className="fa fa-power-off fa-2x"></i>
+	         	<Link  className="nav-text" to={"/"}>Logout</Link>
 
-		    </li>  
+			    </li>  
+			  </ul>
 		  </ul>
-	  </ul>
-	</nav>
-	<div className="box-dashboard">
-	<img src="/images/ch2.png" alt=""/>
-	<h2>{userDetails}, {userReducer.user.username}</h2>
-	</div>
+		</nav>
+		<div className="box-dashboard">
+		<img src="/images/ch2.png" alt=""/>
+		<h2>{userDetails}, {userReducer.user.username}</h2>
+		</div>
 	</div>
 		
 	 
