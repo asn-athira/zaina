@@ -27,7 +27,7 @@ input {
       FORM
 *****************/
 .signup {
-  background-color: #00bfff;
+  background-color: #CEEDF2;
   width: 100%;
   max-width: 500px;
   padding: 50px 70px;
@@ -42,7 +42,7 @@ input {
 
 h1 {
   text-align: center;
-  color: #a4243b;
+  color: #3D68E0;
 }
 h2 {
   text-align: center;
@@ -113,7 +113,7 @@ h2 span {
 
 /*  Button */
 button {
-  background: #a4243b;
+  background: #3D68E0;
   color: white;
   padding: 12px 0;
   font-size: 1.2rem;
@@ -122,5 +122,5 @@ button {
 }
 
 button:hover {
-  background: #4b111b;
+  background: #8BCB90;
 }
