@@ -9,7 +9,7 @@ export const logUserOut = () => ({type: "LOG_OUT"})
 export const fetchUser = (userInfo) => dispatch => {
   //let history = useHistory();
 
-    fetch(`http://localhost:3001/auth/login`, {
+    fetch(`https://zaina-api.herokuapp.com/auth/login`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -40,7 +40,7 @@ export const fetchUser = (userInfo) => dispatch => {
 }
 
 export const signUserUp = (userInfo) => dispatch => {
-    fetch(`http://localhost:3001/users`, {
+    fetch(`https://zaina-api.herokuapp.com/users`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -61,7 +61,7 @@ export const signUserUp = (userInfo) => dispatch => {
 }
 
 export const autoLogin = () => dispatch => {
-    fetch(`http://localhost:3001/auto_login`, {
+    fetch(`https://zaina-api.herokuapp.com/auto_login`, {
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json",
