@@ -60,14 +60,23 @@ export const signUserUp = (userInfo) => dispatch => {
         body: JSON.stringify(userInfo)
     })
     .then(res => res.json())
+    .then(response => {
+      if (!!response.error) {
+        alert(response.error)
+      } else {
+        alert(response.alert)
+        dispatch(setUser(response.user))
+      }
+    })
+
     .then(data => {
         // data sent back will in the format of
         // {
         //     user: {},
         //.    token: "aaaaa.bbbbb.bbbbb"
         // }
-        localStorage.setItem("token", data.token)
-        dispatch(setUser(data.user))
+       // localStorage.setItem("token", data.token)
+        //dispatch(setUser(data.user))
     })
 }
 
@@ -113,7 +122,7 @@ export const resetPassword = (credentials) => dispatch => {
 
 export const autoLogin = () => dispatch => {
     //fetch(`https://zaina-api.herokuapp.com/auto_login`, {
-        fetch(`http://localhost:3001/auto_login`, {
+        fetch(`${baseURL}/auto_login`, {
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json",

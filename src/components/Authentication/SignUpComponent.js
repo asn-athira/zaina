@@ -7,12 +7,17 @@ import {connect} from 'react-redux'
 import {signUserUp} from '../../actions/userActions'
 
 class SignUpComponent extends React.Component {
-    state = {
-        name: "",
-        username: "",
-        password: "",
-        email: ""
-    }
+   
+    constructor(props) {
+
+    super(props);
+    this.state = { 
+      name: '',
+      username: '',
+      email: '',
+      password: ''
+     };
+  }
 
     handleOnChange = (e) => {
         e.persist();
