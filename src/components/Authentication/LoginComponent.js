@@ -32,6 +32,7 @@ class LoginComponent extends React.Component {
     onSubmit = (e) => {
         e.preventDefault()
         this.props.fetchUser(this.state)
+        //this.props.push('/dashboard')
 
 
     }
@@ -66,8 +67,9 @@ class LoginComponent extends React.Component {
                   </div>
                  
                     <button>Sign In</button>
-
+                    <h4 style={{textAlign:"right"}}><span><Link  to={"/forgot_password"}>Forgot Password?</Link></span></h4>
                 </form>
+
             </div>
         )
     }

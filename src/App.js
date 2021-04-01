@@ -12,6 +12,9 @@ import LogoutComponent from './components/Authentication/LogoutComponent'
 
 import SignUpComponent from './components/Authentication/SignUpComponent'
 
+import ForgotpasswordComponent from './components/Authentication/ForgotpasswordComponent'
+import ResetpasswordComponent from './components/Authentication/ResetpasswordComponent'
+
 import Profile from './container/Dashboard/Profile'
 //import {autoLogin} from './actions/userActions'
 //import {logUserOut} from './actions/userActions'
@@ -30,15 +33,14 @@ const App = (props) => {
     return (
       <div>
       
-       <BrowserRouter>
+        <BrowserRouter>
           <Switch>
             <Route 
               exact path='/' 
               render={props => (
               <Home />
               )}
-            />
-            
+            />                        
             <Route 
               exact path='/login' 
               render={props => (
@@ -69,9 +71,22 @@ const App = (props) => {
               <Profile />
               )}
               />
+              <Route 
+              exact path='/forgot_password' 
+               render={props => (
+              <ForgotpasswordComponent />
+              )}
+              />              
+              <Route 
+              path='/reset_password' 
+              render={props => (
+              <ResetpasswordComponent />
+                )}
+              />
+             
             </Switch>
         {
-          !userReducer.loggedIn ? <Redirect to="/" /> : <Redirect to="/dashboard" />
+          !userReducer.loggedIn ? null : <Redirect to="/dashboard" />
         }
         </BrowserRouter>
         </div>
