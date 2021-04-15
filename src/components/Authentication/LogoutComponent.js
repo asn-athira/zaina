@@ -19,7 +19,8 @@ class LogoutComponent extends React.Component {
 
   render() {
     return (
-      <Redirect to="/signup" />
+     <Redirect to="/login" />
+             //window.location = "/"
     );
   }
 }

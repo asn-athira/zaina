@@ -9,7 +9,7 @@ export const logUserOut = () => ({type: "LOG_OUT"})
 export const fetchUser = (userInfo) => dispatch => {
   
     //fetch(`https://zaina-api.herokuapp.com/auth/login`, {
-        fetch(`${baseURL}/auth/login`, {
+        fetch(`${baseURL}/login`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -26,25 +26,30 @@ export const fetchUser = (userInfo) => dispatch => {
     //}
     //)
     .then(res => res.json())
-    .then(response => {
-      if (!!response.error) {
-        alert(response.error)
+    .then(res => {
+      if (!!res.error) {
+        alert(res.error)
+        window.location = "/"
       } else {
-        alert(response.alert)
-        dispatch(setUser(response.user))
+        alert(res.alert)
+        //user: res.user
+        dispatch(setUser(res.data))
+       //  localStorage.setItem('user', res.data)
+
         //dispatch(getCurrentUser())
       }
     })
-    .then(data => {
+   .then(data => {
+       //
         // data sent back will in the format of
         //{
              //user: {}
         ////.    token: "aaaaa.bbbbb.bbbbb"
         //}
        // localStorage.setItem("token", data.token)
-        //localStorage.setItem('user', data.user)
-        //user: res.data,
-       // dispatch(setUser(data.user))
+       // localStorage.setItem('user', data.user)
+       //user: res.data
+       //dispatch(setUser(data.user))
     })
     
 }
@@ -79,7 +84,58 @@ export const signUserUp = (userInfo) => dispatch => {
         //dispatch(setUser(data.user))
     })
 }
+export const updateUser = (userInfo) => dispatch => {
+    //fetch(`https://zaina-api.herokuapp.com/users`, {
+        fetch(`${baseURL}/users`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(userInfo)
+    })
+    .then(res => res.json())
+    .then(response => {
+      if (!!response.error) {
+        alert(response.error)
+      } else {
+        alert(response.alert)
+        dispatch(setUser(response.user))
+      }
+    })
 
+    .then(data => {
+        // data sent back will in the format of
+        // {
+        //     user: {},
+        //.    token: "aaaaa.bbbbb.bbbbb"
+        // }
+       // localStorage.setItem("token", data.token)
+        //dispatch(setUser(data.user))
+    })
+}
+export const deleteUser = (id) => dispatch => {
+   return fetch(`${baseURL}/users/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify(id)
+    })
+    .then(res => res.json())
+    .then(response => {
+      if (!!response.error) {
+        alert(response.error)
+      } else {
+        alert(response.alert)
+             }
+    })
+
+    .then(data => {
+      
+    })
+}
 
 export const forgotPassword = (email) => dispatch => {
   return fetch(`${baseURL}/forgot_password`, {
@@ -119,6 +175,29 @@ export const resetPassword = (credentials) => dispatch => {
     .catch(console.log)
   
 }
+
+export const userDetails = (uname) => dispatch => {
+  return fetch(`${baseURL}/user_details`, {
+      uname: "include",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(uname)
+    })
+    .then(res => res.json())
+    .then(response => {
+      if (!!response.error) {
+        alert(response.error)
+      } else {
+        alert(response.alert)
+       
+      }
+    })
+  
+    //.then(data => data.json())
+}
+
 
 export const autoLogin = () => dispatch => {
     //fetch(`https://zaina-api.herokuapp.com/auto_login`, {

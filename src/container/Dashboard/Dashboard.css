@@ -164,3 +164,34 @@ height: 100%;
   text-align: center;
 
 }
+.button-dashboard{
+  background-color: blue; /* Green */
+  border: none;
+  color: white;
+  padding: .5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button-addbooks{
+  display: flex;
+  position: absolute;
+  background-color: skyblue; /* Green */
+  border: none;
+  color: white;
+  padding-left: ;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.fa-icon{
+  border: none;
+  color: blue;
+  padding: .5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

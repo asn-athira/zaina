@@ -17,6 +17,14 @@ import rootReducer from './reducers/index'
 //
 //export const browserHistory = createBrowserHistory();
 
+
+
+
+
+//const sagaMiddleware = createSagaMiddleware();
+
+
+
 const store = createStore(rootReducer, applyMiddleware(thunk))
 
 ReactDOM.render(

@@ -16,6 +16,11 @@ import ForgotpasswordComponent from './components/Authentication/ForgotpasswordC
 import ResetpasswordComponent from './components/Authentication/ResetpasswordComponent'
 
 import Profile from './container/Dashboard/Profile'
+import Books from './container/Dashboard/Books'
+import Addbooks from './container/Dashboard/Addbooks'
+import Updatebooks from './container/Dashboard/Updatebooks'
+
+//import PrivateRoute from './PrivateRoute'
 //import {autoLogin} from './actions/userActions'
 //import {logUserOut} from './actions/userActions'
 //import history from './history/history'
@@ -24,12 +29,15 @@ import Profile from './container/Dashboard/Profile'
 
 const App = (props) => {
   const userReducer = useSelector(state => state.userReducer)
+  //let username = userReducer.user
   //const dispatch = useDispatch();
 //  
   //useEffect(() => {
     //dispatch(autoLogin())
   //}, [])
-// 
+//
+
+
     return (
       <div>
       
@@ -69,6 +77,24 @@ const App = (props) => {
               exact path='/profile' 
                render={props => (
               <Profile />
+              )}
+              />
+              <Route 
+              exact path='/books'
+               render={props => (
+              <Books />
+              )}
+              />
+              <Route 
+              exact path='/add_books' 
+               render={props => (
+              <Addbooks />
+              )}
+              />
+              <Route 
+              exact path='/update_books' 
+               render={props => (
+              <Updatebooks/>
               )}
               />
               <Route 
