@@ -21,6 +21,7 @@ const Dashboard = (props) => {
   //}
   //const baseURL = "http://localhost:3001"
   const baseURL = "https://zaina-api.herokuapp.com"
+  
   const [data, setData] = useState([]);
      
 
@@ -46,7 +47,6 @@ const Dashboard = (props) => {
         console.log(err);
       });
        }, []);// eslint-disable-line react-hooks/exhaustive-deps
-    
 
   
      
@@ -98,7 +98,10 @@ return (
 	 
 	);
   }
- 
+  else
+  {
+  	window.location = "/"
+  }
 };
 export default Dashboard;
 

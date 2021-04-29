@@ -9,15 +9,14 @@ import {useSelector} from 'react-redux'
 const Addbooks = (props) => {
 
     //const [name, code, author, description, setState] = useState([]);
-    const baseURL = "http://localhost:3001"
-    //const baseURL = "https://zaina-api.herokuapp.com"
+    //const baseURL = "http://localhost:3001"
+    const baseURL = "https://zaina-api.herokuapp.com"
 
     const initBook = {name: '', code: '', author: '', description: ''};
     const [book, setBook] = useState(initBook);
 
 
     const userReducer = useSelector(state => state.userReducer)
-    let token = userReducer.token
     
     const handleChange = e => {
         const {name, value} = e.target;
@@ -26,7 +25,7 @@ const Addbooks = (props) => {
 
    const handleSubmit = e => {
         e.preventDefault();
-
+    let token = userReducer.token
        fetch(`${baseURL}/books`, {
         method: "POST",
         headers: {
