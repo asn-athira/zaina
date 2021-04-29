@@ -17,7 +17,7 @@ const Books = (props) => {
  
 
   useEffect(() => {
-        let token = userReducer.token
+         let token = userReducer.token
          fetch(`${baseURL}/get_user_books`, {
           method: 'GET',
           headers: {
@@ -33,7 +33,7 @@ const Books = (props) => {
       .catch((err) => {
         console.log(err);
       });
-       }, []);
+       }, []);// eslint-disable-line react-hooks/exhaustive-deps
 
   
      

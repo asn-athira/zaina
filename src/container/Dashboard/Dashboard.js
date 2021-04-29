@@ -45,7 +45,8 @@ const Dashboard = (props) => {
       .catch((err) => {
         console.log(err);
       });
-       }, []);
+       }, []);// eslint-disable-line react-hooks/exhaustive-deps
+    
 
   
      

@@ -18,7 +18,7 @@ const Zainaoffers = (props) => {
     useEffect(() => { 
      dispatch(fetchOffer());
     
-     }, []);
+     }, []);// eslint-disable-line react-hooks/exhaustive-deps
     
   //  setData(offerReducer.offers);
     

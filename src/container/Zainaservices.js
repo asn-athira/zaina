@@ -17,7 +17,7 @@ const Zainaservices = (props) => {
     useEffect(() => { 
       dispatch(fetchService())  
      
-     }, []);
+     }, []);// eslint-disable-line react-hooks/exhaustive-deps
     
     
 
