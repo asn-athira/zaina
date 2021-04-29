@@ -13,9 +13,9 @@ class SignUpComponent extends React.Component {
     super(props);
     this.state = { 
       name: '',
-      username: '',
       email: '',
-      password: ''
+      password: '',
+      password_confirmation: ''
      };
   }
 
@@ -28,7 +28,14 @@ class SignUpComponent extends React.Component {
 
     onSubmit = (e) => {
         e.preventDefault()
-        this.props.signUserUp(this.state)
+        const { password, password_confirmation } = this.state;
+        if (password !== password_confirmation) {
+          alert("Passwords don't match");
+          
+        } else {
+          this.props.signUserUp(this.state)
+        }
+        
     }
 
     render(){
@@ -44,14 +51,7 @@ class SignUpComponent extends React.Component {
                   onChange={this.handleOnChange} required />
                   <label className="signup__label" for="username">Name</label>
                 </div>
-                <div className="signup__field">
-                  <input className="signup__input" type="text" 
-                  name="username"                             
-                  value={this.state.username}
-                  onChange={this.handleOnChange}
-                   required />
-                  <label className="signup__label" for="username">UserName</label>
-                </div>
+                
                 <div className="signup__field">
                   <input className="signup__input" 
                   type="email"
@@ -70,6 +70,15 @@ class SignUpComponent extends React.Component {
                    required />
                   <label className="signup__label" for="password">Password</label>
                 </div>
+                <div className="signup__field">
+                    <input className="signup__input" 
+                    type="password"
+                    name="password_confirmation"
+                    value={this.state.password_confirmation}
+                    onChange={this.handleOnChange}
+                     required />
+                    <label className="signup__label" for="password">Password Confirmation</label>
+                  </div>
                
                 <button>Sign up</button>
                 

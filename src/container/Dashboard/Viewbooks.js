@@ -6,19 +6,22 @@ import {Link} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 
 
-const Books = (props) => {
+const Viewbooks = (props) => {
 
-  //const baseURL = "http://localhost:3001"
-  const baseURL = "https://zaina-api.herokuapp.com"
   const [data, setData] = useState([]);
 
   const userReducer = useSelector(state => state.userReducer)
   
- 
+    //const baseURL = "http://localhost:3001"
+    const baseURL = "https://zaina-api.herokuapp.com"
 
   useEffect(() => {
         let token = userReducer.token
-         fetch(`${baseURL}/get_user_books`, {
+        let search = window.location.search;
+        let params = new URLSearchParams(search);
+        let vid = params.get('id');
+           //let vid = 4
+        fetch(`${baseURL}/books/${vid}`,{
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',
@@ -38,33 +41,7 @@ const Books = (props) => {
   
      
   // Delete books
-const deleteBook = (id) => {
-  let token = userReducer.token
-  fetch(`${baseURL}/books/${id}`, {
-        method: "DELETE",
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'Authorization' : `${token}`
-        },
-        body: JSON.stringify(id)
-    })
-    .then(res => res.json())
-    .then(response => {
-      if (!!response.error) {
-        alert(response.error)
-      } else {
-        alert(response.alert)
-             }
-    })
 
-    .then(data => {
-      
-    })
-}
-
-
-   
 
 return (
 	<div>
@@ -102,9 +79,7 @@ return (
 		<div className="box-dashboard">
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <h1>Books</h1> <br />
-  		 <p></p>
-        <Link  className="button-dashboard" to={"/add_books"} style={{float: 'right'}}>Add Books</Link>
-        
+  		 <p></p>      
         <br /><br />
         <table className="table">
           <thead className="thead">
@@ -114,27 +89,18 @@ return (
             <th>Author</th>
             <th>Description</th>
             <th>User id</th>
-            <th>Action</th>
            </thead>
          <tbody className="tr">
-         {data.map((book) => (
-           <tr id={book.id} >
-             <td>{book.id}</td>
-             <td>{book.name}</td>
-             <td>{book.code}</td>
-             <td>{book.author}</td>
-             <td>{book.description}</td>
-             <td>{book.user_id}</td>
-             <td> 
-              <button className="button-dashboard" onClick={() => { deleteBook(book.id) }} >
-              <i className="fa fa-trash fa-2x" ></i>
-              </button>   &nbsp;&nbsp;&nbsp;&nbsp;               
-              <button className="button-dashboard"><Link to={`/update_books?id=${book.id}`}><i className="fa fa-edit fa-2x" /></Link></button>
-              &nbsp;&nbsp;&nbsp;&nbsp;               
-              <button className="button-dashboard"><Link to={`/view_books?id=${book.id}`}><i className="fa fa-eye fa-2x" /></Link></button>
-             </td>
+         
+           <tr id={data.id} >
+             <td>{data.id}</td>
+             <td>{data.name}</td>
+             <td>{data.code}</td>
+             <td>{data.author}</td>
+             <td>{data.description}</td>
+             <td>{data.user_id}</td>
+             
            </tr>
-           ))}
        </tbody>
 
        </table>
@@ -148,6 +114,6 @@ return (
    
 };
 
-export default Books
+export default Viewbooks
 
 

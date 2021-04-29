@@ -1,0 +1,112 @@
+
+.zaina-sec-row{
+	width: 1280px;
+	height: 296px;
+	left: 60px;
+}
+.zaina-offers-sec{
+	/* Auto Layout */
+
+align-items: center;
+padding: 40px 50px 80px;
+
+width: 346px;
+height: 450px;
+background: url('../images/abc.jpeg'),#ADB3BA;
+border-radius: 32px;
+
+}
+ 
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  top: 450px;
+
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.offers-h1{
+	position: absolute;
+	width: 485px;
+	height: 67px;
+	left: 200px;
+	top: 100px;
+	font-family: Krona One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 48px;
+	line-height: 140%;
+	color: #86A7D0;
+}
+
+.offer-button{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 70px;
+	position: absolute;
+
+	background: #69B0EA;
+	border-radius: 50px;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 180%;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.offer-button2{
+	display: flex;
+	position: absolute;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 12px 70px;
+	position: absolute;
+	
+	background: ##2869A0;
+	border-radius: 50px;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 180%;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.zaina-offer-des{
+
+font-family: Krona One;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 180%;
+
+
+color: #FFFFFF;
+}
+.zaina-offers-p-text{
+	/* text / p22 */
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: 300;
+font-size: 22px;
+line-height: 150%;
+/* identical to box height, or 33px */
+
+
+/* color / white */
+
+color: #FFFFFF;
+
+
+}

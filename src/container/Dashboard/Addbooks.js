@@ -1,41 +1,40 @@
-import React from 'react';
+import React, {useState} from 'react';
 //import {connect} from 'react-redux'
 
 import './Dashboard.css';
 import {Link} from 'react-router-dom'
+import {useSelector} from 'react-redux'
 
 
-class Addbooks extends React.Component {
+const Addbooks = (props) => {
 
-    constructor(props) {
+    //const [name, code, author, description, setState] = useState([]);
+    const baseURL = "http://localhost:3001"
+    //const baseURL = "https://zaina-api.herokuapp.com"
 
-    super(props);
-    this.state = { 
-      name: '',
-      code: '',
-      author: '',
-      description: ''
-     };
-  }
+    const initBook = {name: '', code: '', author: '', description: ''};
+    const [book, setBook] = useState(initBook);
 
-    handleOnChange = (e) => {
-        e.persist();
-        this.setState(() => ({
-            [e.target.name]: e.target.value 
-        }))
+
+    const userReducer = useSelector(state => state.userReducer)
+    let token = userReducer.token
+    
+    const handleChange = e => {
+        const {name, value} = e.target;
+        setBook({...book, [name]: value});
     }
 
-    onSubmit = (e) => {
-        e.preventDefault()
+   const handleSubmit = e => {
+        e.preventDefault();
 
-       //fetch(`http://localhost:3001/books`, {
-        fetch(`https://zaina-api.herokuapp.com/books`, {
+       fetch(`${baseURL}/books`, {
         method: "POST",
         headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
+            'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              'Authorization' : `${token}`
         },
-        body: JSON.stringify(this.state)
+        body: JSON.stringify(book)
     })
     .then(res => res.json())
     .then(response => {
@@ -47,8 +46,7 @@ class Addbooks extends React.Component {
     })
     }
 
-render(){
-     
+
 
 return (
 	<div>
@@ -85,43 +83,44 @@ return (
 		</nav>
 		<div className="box-dashboard">
      
-	      <form onSubmit={this.onSubmit} className="signup">
+	      <form className="signup">
           <h1>Create Books</h1>
               <div className="signup__field">
                   <input className="signup__input" type="text" 
                   name="name"
-                  value={this.state.name}
-                  onChange={this.handleOnChange} required />
+                  value={book.name}
+                  onChange={handleChange}
+                  required />
                   <label className="signup__label" for="name">Book Name</label>
                 </div>
                 <div className="signup__field">
                   <input className="signup__input" type="text" 
                   name="code"                             
-                  value={this.state.code}
-                  onChange={this.handleOnChange}
-                   required />
+                  value={book.code} 
+                  onChange={handleChange}                 
+                  required />
                   <label className="signup__label">Code</label>
                 </div>
                 <div className="signup__field">
                   <input className="signup__input" 
                   type="text"
                   name="author"
-                  value={this.state.author}
-                  onChange={this.handleOnChange}
-                   required />
+                  value={book.author}
+                  onChange={handleChange}
+                  required />
                   <label className="signup__label">Author</label>
                 </div>
                 <div className="signup__field">
                   <input className="signup__input" 
                   type="text"
                   name="description"
-                  value={this.state.description}
-                  onChange={this.handleOnChange}
-                   required />
+                  value={book.description}
+                  onChange={handleChange}
+                  required />
                   <label className="signup__label">Description</label>
                 </div>
                
-                <button>Create Books</button>
+                <button  type="submit" onClick={handleSubmit} >Add Books</button>
                 
               </form>    
            
@@ -131,7 +130,7 @@ return (
 	 
 	);
 
-   }
+   
 };
 
 export default Addbooks

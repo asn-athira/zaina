@@ -1,11 +1,10 @@
-import React from 'react'
+import React, {useEffect,useState} from 'react';
 import './Dashboard.css';
 import {Link} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 
 
 const Dashboard = (props) => {
-	const userReducer = useSelector(state => state.userReducer)
         
       // let {users} = userReducer.user
         //let {users} = {
@@ -20,6 +19,36 @@ const Dashboard = (props) => {
     //}
     //]
   //}
+  //const baseURL = "http://localhost:3001"
+  const baseURL = "https://zaina-api.herokuapp.com"
+  const [data, setData] = useState([]);
+     
+
+  const userReducer = useSelector(state => state.userReducer)
+  
+ 
+
+  useEffect(() => {
+        let token = userReducer.token
+         fetch(`${baseURL}/profile`, {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              'Authorization' : `${token}`
+          }
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+       }, []);
+
+  
+     
          if (userReducer.loggedIn === true) {
 
 
@@ -59,7 +88,7 @@ return (
 		</nav>
 		<div className="box-dashboard">
 		<img src="/images/ch2.png" alt=""/>
-		{userReducer.loggedIn ? <h1>welcome {userReducer.user} </h1> : <h1>Not logged</h1>}
+		{userReducer.loggedIn ? <h1>welcome {data.name} </h1> : <h1>Not logged</h1>}
 		</div>
 
 
@@ -68,10 +97,7 @@ return (
 	 
 	);
   }
-  else
-  {
-  	window.location = "/"
-  }
+ 
 };
 export default Dashboard;
 

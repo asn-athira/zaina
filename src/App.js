@@ -19,6 +19,11 @@ import Profile from './container/Dashboard/Profile'
 import Books from './container/Dashboard/Books'
 import Addbooks from './container/Dashboard/Addbooks'
 import Updatebooks from './container/Dashboard/Updatebooks'
+import Viewbooks from './container/Dashboard/Viewbooks'
+
+import Zainaoffers from './container/Zainaoffers'
+
+import Zainaservices from './container/Zainaservices'
 
 //import PrivateRoute from './PrivateRoute'
 //import {autoLogin} from './actions/userActions'
@@ -98,6 +103,12 @@ const App = (props) => {
               )}
               />
               <Route 
+              exact path='/view_books' 
+               render={props => (
+              <Viewbooks/>
+              )}
+              />
+              <Route 
               exact path='/forgot_password' 
                render={props => (
               <ForgotpasswordComponent />
@@ -109,7 +120,18 @@ const App = (props) => {
               <ResetpasswordComponent />
                 )}
               />
-             
+             <Route 
+              exact path='/offers' 
+              render={props => (
+              <Zainaoffers />
+              )}
+            />
+             <Route 
+              exact path='/services' 
+              render={props => (
+              <Zainaservices />
+              )}
+            />   
             </Switch>
         {
           !userReducer.loggedIn ? null : <Redirect to="/dashboard" />

@@ -1,6 +1,6 @@
-//const baseURL = "http://localhost:3001"
+// /const baseURL = "http://localhost:3001"
 const baseURL = "https://zaina-api.herokuapp.com"
-
+ 
 const setUser = (payload) => ({ type: "SET_USER", payload})
 
 export const logUserOut = () => ({type: "LOG_OUT"})
@@ -9,7 +9,7 @@ export const logUserOut = () => ({type: "LOG_OUT"})
 export const fetchUser = (userInfo) => dispatch => {
   
     //fetch(`https://zaina-api.herokuapp.com/auth/login`, {
-        fetch(`${baseURL}/login`, {
+        fetch(`${baseURL}/authenticate`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export const fetchUser = (userInfo) => dispatch => {
       } else {
         alert(res.alert)
         //user: res.user
-        dispatch(setUser(res.data))
+        dispatch(setUser(res.auth_token))
        //  localStorage.setItem('user', res.data)
 
         //dispatch(getCurrentUser())
@@ -68,9 +68,11 @@ export const signUserUp = (userInfo) => dispatch => {
     .then(response => {
       if (!!response.error) {
         alert(response.error)
+        window.location = "/signup"
       } else {
         alert(response.alert)
-        dispatch(setUser(response.user))
+        window.location = "/login"
+        //dispatch(setUser(response.user))
       }
     })
 

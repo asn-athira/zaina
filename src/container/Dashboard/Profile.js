@@ -1,119 +1,100 @@
-import React from 'react';
-import {connect} from 'react-redux'
+import React, {useEffect, useState} from 'react';
+//import {connect} from 'react-redux'
 
 import './Dashboard.css';
 import {Link} from 'react-router-dom'
-import {deleteUser} from '../../actions/userActions'
+import {useSelector} from 'react-redux'
 
 
-class Profile extends React.Component {
+const Profile = (props) => {
+  
+  //const baseURL = "http://localhost:3001"
+    const baseURL = "https://zaina-api.herokuapp.com"
+  const [data, setData] = useState([]);
+     
 
-   state = {
-        users: [],
-       error: null
-     // isLoaded: false
-    }
-
-  componentDidMount() {
-    fetch('https://zaina-api.herokuapp.com/users')
-      .then(res => res.json())
-      .then(json => {
-      	//const fetchusers = [];
-                //for (let key in res.data) {
-                    //fetchusers.push({
-                        //...res.data[key],
-                        //id: key
-                    //});
-                //}
-          this.setState({
-            isLoaded: true,
-            users: json
-          });
-        },
-        // error handler
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
-  }
-
+  const userReducer = useSelector(state => state.userReducer)
+  
  
-    
 
-render(){
-     var  users  = this.state;
+  useEffect(() => {
+        let token = userReducer.token
+         fetch(`${baseURL}/profile`, {
+          method: 'GET',
+          headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json',
+              'Authorization' : `${token}`
+          }
+      })
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+       }, []);
+
+  
+     
+ 
 
 return (
-	<div>
-		<nav className="navbar" >
-	   &nbsp;&nbsp;<img src="/images/logo1.png" className="logo1" alt=""/>
+  <div>
+    <nav className="navbar" >
+     &nbsp;&nbsp;<img src="/images/logo1.png" className="logo1" alt=""/>
 
-		  
-	    <img src="/images/user.png" className="logout" alt=""/>
+      
+      <img src="/images/user.png" className="logout" alt=""/>
 
-		</nav>
-	  <nav className="main-menu">
-		  <ul>
-		    <li> 
-		      <i className="fa fa-home fa-2x"></i>
-	        <Link  className="nav-text" to={"/dashboard"}>Home</Link>
+    </nav>
+    <nav className="main-menu">
+      <ul>
+        <li> 
+          <i className="fa fa-home fa-2x"></i>
+          <Link  className="nav-text" to={"/dashboard"}>Home</Link>
 
-		    </li>
-		      <li classNameName="has-subnav">
-			      <i className="fa fa-user fa-2x"></i>
-		        <Link  className="nav-text" to={"/profile"}>Profile</Link>
-		      </li>
+        </li>
+          <li classNameName="has-subnav">
+            <i className="fa fa-user fa-2x"></i>
+            <Link  className="nav-text" to={"/profile"}>Profile</Link>
+          </li>
           <li classNameName="has-subnav">
             <i className="fa fa-book fa-2x"></i>
             <Link  className="nav-text" to={"/books"}>Books</Link>
           </li>
-			  <ul classNameName="logout">
-			    <li>
-			      <i className="fa fa-power-off fa-2x"></i>
-	         	<Link  className="nav-text" to={"/"}>Logout</Link>
+        <ul classNameName="logout">
+          <li>
+            <i className="fa fa-power-off fa-2x"></i>
+            <Link  className="nav-text" to={"/"}>Logout</Link>
 
-			    </li>  
-			  </ul>
-		  </ul>
-		</nav>
-		<div className="box-dashboard">
-		
-	     <h1>Users</h1>        
-	            <table>
-	              <thead>
-	                <th>Id</th>&nbsp;&nbsp;&nbsp;&nbsp;
-	                <th>Name</th>&nbsp;&nbsp;&nbsp;&nbsp;
-                  <th>Action</th>
-		             </thead>
-	             <tbody>
-             {users.map(user => (
-               <tr id={user.id}>
-                 <td>{user.id}</td>&nbsp;&nbsp;&nbsp;&nbsp;
-                 <td>{user.name}</td>&nbsp;&nbsp;&nbsp;&nbsp;
-                 <td> </td>
-               </tr>
-               ))}
-             </tbody>
-
-	           </table>
+          </li>  
+        </ul>
+      </ul>
+    </nav>
+    <div className="box-dashboard">
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h1>My Profile</h1> <br />
+       <p></p>
+        
+          <div className="zaina-dashboard-sec" ><br /><br />
+            <label>User Id &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{data.id}</label><br />
+            <label>Name   &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{data.name}</label><br />
+            <label>&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;{data.email}</label>
+            </div>
+             
+         
            
-	  </div>
-	</div>
-		
-	 
-	);
+    </div>
+  </div>
+    
+   
+  );
 
-   }
+   
 };
-const mapDispatchToProps = (dispatch) => {
-    return {
-        deleteUser: (id) => dispatch(deleteUser(id))
-    }
-}
 
-export default connect(null, mapDispatchToProps)(Profile)
+export default Profile
 
 

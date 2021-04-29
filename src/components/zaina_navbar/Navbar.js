@@ -19,8 +19,8 @@ return (
         </div>
         <ul className="nav-links">
           <li><a href="about.html">About</a></li>
-          <li><a href="about.html">Services</a></li>
-          <li><a href="about.html">Offers</a></li>
+          <li><Link  to={"/services"}>Services</Link></li>
+          <li><Link  to={"/offers"}>Offers</Link></li>
           <li><a href="about.html">Pricing</a></li>
           <li><a href="about.html">FAQ</a></li>
           <li><a href="about.html">Locations</a></li> 
